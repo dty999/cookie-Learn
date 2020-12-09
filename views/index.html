@@ -9,5 +9,24 @@
     <p>Hello World
         
     </p>
+    <!-- <script src="http://127.0.0.1:8888/?callback = handleCallback"></script> -->
+    <script>
+        let name = ''
+        var script = document.createElement('script')
+        script.type = 'text/javascript'
+        script.src = 'http://127.0.0.1:8888/?callback = handleCallback'
+        console.log('mm111mmm')
+        document.head.appendChild(script)//异步加载
+        console.log(name)//还是得通过回调函数的形式获取数据
+        
+        var handleCallback =  function handleCallback(res){
+            console.log((res))
+        }
+    </script>
+    <!-- <script src="http://127.0.0.1:8888/?callback = handleCallback"></script> -->
+    <script>
+        
+
+    </script>
 </body>
 </html>
