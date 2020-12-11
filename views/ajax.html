@@ -23,7 +23,7 @@
     }
     const ajax = function (req, succeed, fail) {
         let xmlhttp = new XMLHttpRequest()
-        // console.log(xmlhttp)
+        console.log(xmlhttp)
         xmlhttp.open(req.method,req.url,req.async)
         xmlhttp.send(req.body)
         xmlhttp.onreadystatechange = () => {
