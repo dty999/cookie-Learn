@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const cookieParser=require("cookie-parser");
+const fs = require('fs')
 const app = express()
 const port = 80
 app.use(express.static('public'))
@@ -21,10 +22,13 @@ app.set('view engine', 'art');
 
 
 
-app.get('/', (req, res) => {
+app.get('/js30_6.json', (req, res) => {
     
+    fs.readFile('Public/js30_6.json',(err,data)=>{
+        if (err) throw err
+        res.send(data.toString())
 
-    res.render('index.html')
+    })
 })
 
 
